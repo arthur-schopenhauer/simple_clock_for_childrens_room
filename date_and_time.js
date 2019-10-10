@@ -8,7 +8,7 @@ var partOfDay = function() {
         time >= 12 && time < 17 ? "afternoon" :
         time >= 17 && time < 20 ? "evening" :
         time >= 20 && time < 23 ? "night" :
-        time == 23 && minutes >= 59 ? "night" :
+        time >= 23 && minutes <= 59 ? "night" :
         time == 0 && minutes == 0 ? "midnight" :
         time >= 0 && time <= 5 ? "before dawn" :
         "check timeOfDay variable"
